@@ -81,9 +81,10 @@ public class BoardController {
 		return "redirect:/board/main";
 	}
 	
+	// localhost:8080/board/categoty/asdf
 	@ResponseBody
-	@GetMapping("{category}")
+	@GetMapping("category/{category}")
 	public List<BoardVo> getList(@PathVariable String category) {
-		return service.getList();
+		return service.getListCategory(category);
 	}
 }

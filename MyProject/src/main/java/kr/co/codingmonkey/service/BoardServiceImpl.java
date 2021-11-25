@@ -98,4 +98,10 @@ public class BoardServiceImpl implements BoardService {
 		}).collect(Collectors.toList());
 	}
 
+	@Override
+	public List<BoardVo> getListCategory(String category) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

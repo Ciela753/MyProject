@@ -10,4 +10,5 @@ public interface BoardService {
 	public boolean modify(BoardVo board);
 	public boolean remove(Long bno);
 	public List<BoardVo> getList();
+	public List<BoardVo> getListCategory(String Category);
 }
