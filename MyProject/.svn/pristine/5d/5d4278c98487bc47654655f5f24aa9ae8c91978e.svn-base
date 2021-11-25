@@ -1,0 +1,58 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <jsp:include page="../includes/head.jsp"></jsp:include>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <!-- ======= Header ======= -->
+ <%--  <jsp:include page="../includes/header.jsp"/> --%>
+  <!-- End Header -->
+
+  <main id="main" data-aos="fade-up">
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div>
+                  <img src="${pageContext.request.contextPath}/resources/img/portfolio/portfolio-details-1.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              </ul>
+            </div>           
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+	
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+	<%-- <jsp:include page="../includes/footer.jsp"/> --%>
+  <!-- End Footer -->
+	<jsp:include page="../includes/foot.jsp"/>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <jsp:include page="../includes/head.jsp"></jsp:include>
+</head>
+<body>
+<!-- ======= Top Bar ======= -->
+  <!-- ======= Header ======= -->
+  <jsp:include page="../includes/header.jsp"/>
+  
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>Welcome to <span>Portfolio</span></h1>
+      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      <div class="d-flex">
+        <a href="${pageContext.request.contextPath}/board/register" class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+	<!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="text" name="search"><input type="submit" value="creative search...">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <main id="main">  
+  	<div id="Container">
+  	
+  	</div>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <jsp:include page="../includes/footer.jsp"/>
+  <!-- End Footer -->
+
+  <jsp:include page="../includes/foot.jsp" />
+<script>
+
+</body>
+
+</html>

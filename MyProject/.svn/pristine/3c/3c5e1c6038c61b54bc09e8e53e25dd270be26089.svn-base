@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.codingmonkey.mapper.BoardMapper">
+	<select id="getList" resultType="kr.co.codingmonkey.domain.BoardVo">
+		SELECT * FROM TBL_BOARD WHERE BNO > 0
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO TBL_BOARD(BNO, TITLE, CONTENT, ID) 
+		VALUES (SEQ_BOARD.NEXTVAL, #{title}, #{content}, #{id})
+	</insert>
+	<insert id="insertSelectKey">
+		<selectKey order="BEFORE" keyProperty="bno" resultType="long">
+			SELECT SEQ_BOARD.NEXTVAL FROM DUAL
+		</selectKey>
+		INSERT INTO TBL_BOARD(BNO, TITLE, CONTENT, ID) 
+		VALUES (#{bno}, #{title}, #{content}, #{id})			
+	</insert>
+	<select id="read" resultType="boardVo">
+		SELECT * FROM TBL_BOARD WHERE BNO = #{bno}
+	</select>
+	<delete id="delete">
+		DELETE FROM TBL_BOARD WHERE BNO =#{bno}
+	</delete>
+	<update id="update">
+		UPDATE TBL_BOARD SET
+		TITLE = #{title}
+		,CONTENT = #{content}
+		,ID = #{id}
+		WHERE BNO = #{bno}
+	</update>
+</mapper>

@@ -1,0 +1,7 @@
+package kr.co.codingmonkey.service;
+
+import kr.co.codingmonkey.domain.BoardVo;
+
+public interface ProjectService {
+	public BoardVo get(Long bno);
+}

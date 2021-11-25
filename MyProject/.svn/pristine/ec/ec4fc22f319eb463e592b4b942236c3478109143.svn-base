@@ -1,0 +1,35 @@
+package kr.co.codingmonkey.controller;
+
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import kr.co.codingmonkey.domain.SampleDTOList;
+import lombok.extern.log4j.Log4j;
+
+@Controller
+@RequestMapping("/sample/*")
+
+public class SampleController {
+	private static final Logger log = Logger.getLogger(SampleController.class);
+	@RequestMapping("")
+	public void basic() {
+		log.info("============basic============");
+	}
+	
+	@GetMapping("/ex02")
+	public String ex02(String name, int age) {
+		log.info(name);
+		log.info(age);
+		
+		return "ex02";
+	}
+	
+	@GetMapping("/ex02Bean")
+	public String ex02Bean(SampleDTOList list) {
+		log.info(list);
+		
+		return "ex02Bean";
+	}
+}

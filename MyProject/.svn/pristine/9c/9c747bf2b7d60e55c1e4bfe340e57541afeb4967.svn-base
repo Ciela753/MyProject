@@ -1,0 +1,13 @@
+package kr.co.codingmonkey.service;
+
+import kr.co.codingmonkey.domain.BoardVo;
+
+public class ProjectServiceImpl implements ProjectService {
+
+	@Override
+	public BoardVo get(Long bno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

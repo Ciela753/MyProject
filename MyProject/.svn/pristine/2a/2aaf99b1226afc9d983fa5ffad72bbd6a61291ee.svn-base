@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+			<footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; codingMongkey 2021</span>
+                    </div>
+                </div>
+            </footer>
+            <script>
+            	$(document).ready(Function() {
+            		$('#dataTablec-example').DataTable({
+            			responsive : true
+            		});
+            		$(".sidebar-nav")
+            		.attr("class", "sidebar-nav navbar-collapse collapse")
+            		.attr("aria-expanded", 'false')
+            		.attr("style", "height:1px");
+            	});
+            </script>
+      
