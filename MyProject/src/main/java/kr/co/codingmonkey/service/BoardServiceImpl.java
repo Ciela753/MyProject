@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.codingmonkey.domain.BoardVo;
+import kr.co.codingmonkey.domain.ProjectCriteria;
 import kr.co.codingmonkey.mapper.BoardMapper;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
@@ -99,9 +100,8 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public List<BoardVo> getListCategory(String category) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<BoardVo> getListCategory(ProjectCriteria cri, String category) {
+		return boardMapper.getListCategory(cri, category);
 	}
 
 }

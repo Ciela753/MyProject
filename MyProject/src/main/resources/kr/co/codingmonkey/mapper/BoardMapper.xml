@@ -31,4 +31,13 @@
 		,ID = #{id}
 		WHERE BNO = #{bno}
 	</update>
+	<select id="getListCategory" resultType="kr.co.codingmonkey.domain.BoardVo">
+		        SELECT * 
+		FROM TBL_BOARD 
+		WHERE 
+	    CATEGORY = #{cri.category}
+        AND BNO &lt; #{cri.lastBno}
+        AND ROWNUM &lt;= 24 
+		ORDER BY BNO DESC
+	</select>
 </mapper>

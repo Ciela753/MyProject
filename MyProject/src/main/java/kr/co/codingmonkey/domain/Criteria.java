@@ -12,9 +12,7 @@ import lombok.ToString;
 public class Criteria {
 	private int pageNum;
 	private int amount;
-	private String type;
-	private String keyword;
-	private int category = 1;
+	private String category;
 	
 	
 	public Criteria() {
@@ -28,14 +26,13 @@ public class Criteria {
 		this.amount = amount;
 	}
 	public String[] getTypeArr() {
-		return type == null ? new String[] {} : type.split("");
+		return category == null ? new String[] {} : category.split("");
 	}
 	public String getParams() {
 		return UriComponentsBuilder.newInstance()
 				.queryParam("pageNum", pageNum)
 				.queryParam("amount", amount)
-				.queryParam("type", type)
-				.queryParam("keyword", keyword)
+				.queryParam("category", category)
 				.build().toString();
 		
 	}

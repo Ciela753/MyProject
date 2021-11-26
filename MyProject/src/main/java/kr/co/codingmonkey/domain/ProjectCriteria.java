@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 @Data @AllArgsConstructor 
 public class ProjectCriteria extends Criteria {
-	private Long lastRno = 0L;
+	private Long lastBno = 0L;
 
 	
 	

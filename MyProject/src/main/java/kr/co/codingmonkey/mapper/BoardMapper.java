@@ -2,9 +2,11 @@ package kr.co.codingmonkey.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import kr.co.codingmonkey.domain.BoardVo;
+import kr.co.codingmonkey.domain.ProjectCriteria;
 
 public interface BoardMapper {
 
@@ -15,4 +17,5 @@ public interface BoardMapper {
 	public BoardVo read(Long bno);
 	public int delete(Long bno);
 	public int update(BoardVo board);
+	public List<BoardVo> getListCategory(@Param("cri") ProjectCriteria cri, String category);
 }
